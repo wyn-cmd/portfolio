@@ -1,0 +1,15 @@
+# OS junk
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# Editor and tooling folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local preview artefacts
+*.log

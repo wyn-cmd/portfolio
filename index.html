@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wynston Wong | AI Engineering, Cybersecurity &amp; Digital Forensics</title>
+    <meta name="description" content="Portfolio of Wynston Wong Jun De, an Artificial Intelligence Engineer Intern at SQL VIEW studying Cybersecurity and Digital Forensics at Ngee Ann Polytechnic, specialising in AI and machine learning, with an eJPT certification and a public toolkit of security, forensics and automation projects.">
+    <meta name="theme-color" content="#080b14">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234cc4ff'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='bold' text-anchor='middle' fill='%23041220'%3EW%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        /* Apply the saved colour theme before first paint to avoid a flash. */
+        try {
+            var saved = localStorage.getItem("portfolio-theme");
+            if (saved === "light" || saved === "dark") {
+                document.documentElement.setAttribute("data-theme", saved);
+            }
+        } catch (err) {}
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav">
+        <div class="wrap nav__inner">
+            <a class="brand" href="./">
+                <span class="brand__mark">WW</span>
+                <span class="brand__text">
+                    Wynston Wong
+                    <small>Security &amp; AI</small>
+                </span>
+            </a>
+
+            <nav class="nav__links" data-nav-links aria-label="Primary">
+                <a href="./" aria-current="page">Home</a>
+                <a href="projects/">Projects</a>
+                <a href="experience/">Experience</a>
+                <a href="contact/">Contact</a>
+            </nav>
+
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="display:none">
+                    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+                </svg>
+            </button>
+
+            <button class="icon-btn nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="wrap">
+                <div class="hero__grid">
+                    <div>
+                        <span class="eyebrow">
+                            <span class="eyebrow__dot" aria-hidden="true"></span>
+                            Artificial Intelligence Engineer Intern at SQL VIEW
+                        </span>
+
+                        <h1>Wynston Wong<br><span class="gradient-text">Jun De</span></h1>
+
+                        <p class="hero__role" data-typed='["AI Engineer Intern at SQL VIEW","Cybersecurity & Digital Forensics student","eJPT certified junior pentester","CTF competitor and tool builder"]'>AI Engineer Intern at SQL VIEW</p>
+
+                        <p class="hero__lede">
+                            I build AI tooling by day at SQL VIEW and study Cybersecurity and Digital
+                            Forensics at Ngee Ann Polytechnic, specialising in the AI and Machine
+                            Learning track. My interest sits where the two overlap: reading logs and
+                            memory dumps for the story an attacker left behind, then building the
+                            agents and models that get to the answer faster next time. I found
+                            information technology at thirteen, moved to Linux soon after, and have
+                            been dual-booting and living in virtual machines ever since.
+                        </p>
+
+                        <div class="hero__actions">
+                            <a class="btn btn--primary" href="projects/">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M3 7a2 2 0 0 1 2-2h3.6l1.7 2H19a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                </svg>
+                                Browse projects
+                            </a>
+                            <a class="btn btn--ghost" href="https://github.com/wyn-cmd" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.28 9.28 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.81c0 .27.18.59.69.49A10.06 10.06 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"></path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a class="btn btn--ghost" href="https://www.linkedin.com/in/wynston-wong-290189304/" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9.5 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.94-3.06-1.94 0-2.24 1.45-2.24 2.96V21h-4z"></path>
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                    <aside class="hero__card reveal" aria-label="Profile summary">
+                        <div class="terminal">
+                            <div class="terminal__bar" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div><b>wynston@sqlview</b>:~$ whoami</div>
+                            <div>artificial intelligence engineer intern</div>
+                            <div><b>wynston@sqlview</b>:~$ cat stack.txt</div>
+                            <div>self-hosted agents, rag, prompt engineering</div>
+                            <div>llmops, knowledge engineering, process automation</div>
+                            <div><b>wynston@ngee-ann</b>:~$ cat track.txt</div>
+                            <div>diploma in cybersecurity &amp; digital forensics</div>
+                            <div>specialisation: AI &amp; machine learning (2024 - 2027)</div>
+                            <div><b>wynston@ngee-ann</b>:~$ ls toolkit/</div>
+                            <div>python/ go/ csharp/ cpp/ sql/ linux/</div>
+                            <div><b>wynston@ngee-ann</b>:~$ ./status --certs</div>
+                            <div class="ok">[ok] eJPT junior penetration tester (2026)</div>
+                            <div class="ok">[ok] 1st place, A-YCEP CTF (2023)</div>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="stats reveal">
+                    <div class="stat">
+                        <div class="stat__value">eJPT</div>
+                        <div class="stat__label">Certified junior penetration tester, 2026</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">2x 1st</div>
+                        <div class="stat__label">A-YCEP and Temasek Polytechnic CTFs</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">33</div>
+                        <div class="stat__label">Public projects across security and ML</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">AI Intern</div>
+                        <div class="stat__label">SQL VIEW, since September 2026</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section__head reveal">
+                    <div class="kicker">About</div>
+                    <h2>Secure systems, intelligent detection</h2>
+                    <p>
+                        I am a third-year student at Ngee Ann Polytechnic studying Cybersecurity
+                        and Digital Forensics, and I currently work as an Artificial Intelligence
+                        Engineer Intern at SQL VIEW. I have a passion for nearly all things
+                        digital and scientific: security, information technology, programming,
+                        Linux, robotics and STEM. It began as a general interest in STEM before I
+                        found my call in information technology at thirteen, and it has not
+                        slowed down since.
+                    </p>
+                </div>
+
+                <div class="grid grid--3">
+                    <article class="card reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3l7 3v6c0 4.2-2.9 7.7-7 9-4.1-1.3-7-4.8-7-9V6z"></path>
+                                <path d="M9.5 12.5l1.8 1.8 3.4-3.6"></path>
+                            </svg>
+                        </div>
+                        <h3>Offensive security</h3>
+                        <p>
+                            Penetration testing on web applications and network services, from
+                            reconnaissance through exploitation to a written report with prioritised
+                            remediation advice. Certified as a junior penetration tester with eJPT.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">eJPT</span>
+                            <span class="tag">Web app testing</span>
+                            <span class="tag">Reporting</span>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="6"></circle>
+                                <path d="M20 20l-4.3-4.3"></path>
+                            </svg>
+                        </div>
+                        <h3>Digital forensics</h3>
+                        <p>
+                            Mock investigations carried out in class and on my own hardware: evidence
+                            acquisition, file system and memory analysis, deleted file recovery and
+                            forensic reporting, all following proper evidence handling procedure.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Memory analysis</span>
+                            <span class="tag">File systems</span>
+                            <span class="tag">Evidence handling</span>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M4.2 16.5l2.6-1.5M17.2 9l2.6-1.5"></path>
+                                <circle cx="12" cy="12" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3>AI engineering and agentic systems</h3>
+                        <p>
+                            At SQL VIEW I build self-hosted AI agent projects for internal systems:
+                            chat interfaces over internal workflows and real-time company queries,
+                            a knowledge base that maintains itself over internal documents, plus
+                            the model tuning and output testing that keeps answers reliable. The
+                            same thread runs through my own work, from a RAG pipeline built from
+                            scratch to log-based anomaly detection on the HDFS dataset.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">LLMOps</span>
+                            <span class="tag">Prompt engineering</span>
+                            <span class="tag">Agentic workflows</span>
+                            <span class="tag">RAG</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section__head reveal">
+                    <div class="kicker">Selected work</div>
+                    <h2>Projects worth a look</h2>
+                    <p>
+                        Everything I build is public on GitHub, from a two-factor AES-256 vault to a
+                        pipeline that turns raw authentication logs into an attacker timeline.
+                        These are the ones I would walk through in an interview.
+                    </p>
+                </div>
+
+                <div class="grid grid--3">
+                    <article class="project reveal">
+                        <div class="project__top">
+                            <h3 class="project__name">pyvault</h3>
+                            <div class="project__meta">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                                4
+                            </div>
+                        </div>
+                        <p>
+                            An AES-256 file encryptor that requires two separate passwords before it
+                            will decrypt anything, so a single leaked secret is not enough to open
+                            the vault.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Security</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">AES-256</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__top">
+                            <h3 class="project__name">authlog-sessions</h3>
+                        </div>
+                        <p>
+                            Reconstructs what an attacker did from Linux authentication logs: the
+                            connections behind the login attempts, the addresses that made them, and
+                            what ran after one of them finally worked.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Forensics</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Log analysis</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__top">
+                            <h3 class="project__name">GuardAIn</h3>
+                        </div>
+                        <p>
+                            A lightweight IDS for Linux that watches live network traffic and pairs
+                            anomaly detection with behavioural rules to surface suspicious activity
+                            as it happens.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Security</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Anomaly detection</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__top">
+                            <h3 class="project__name">Honeypotplusplus</h3>
+                        </div>
+                        <p>
+                            An SSH deception system built with Python and Paramiko that safely
+                            captures attacker credentials, commands and behaviour, written for SOC
+                            and DFIR labs that want real attack traffic without real risk.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Security</span>
+                                <span class="tag">Paramiko</span>
+                                <span class="tag">DFIR</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__top">
+                            <h3 class="project__name">rag-from-scratch</h3>
+                        </div>
+                        <p>
+                            A retrieval augmented generation pipeline with nothing hidden: chunking,
+                            embeddings, cosine search and prompt assembly each sit behind a small
+                            swappable interface so the moving parts stay visible.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--green">AI / ML</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Embeddings</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__top">
+                            <h3 class="project__name">vnds-converter</h3>
+                        </div>
+                        <p>
+                            Converts Ren'Py visual novels into the asset formats and scripting
+                            language that VNDS expects, which is how I get desktop games running on a
+                            DS flash card.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Tooling</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Ren'Py</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <p style="margin-top:28px">
+                    <a class="btn" href="projects/">See all 33 projects</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section__head reveal">
+                    <div class="kicker">Toolkit</div>
+                    <h2>What I work with</h2>
+                    <p>Languages, platforms and frameworks I reach for most often.</p>
+                </div>
+
+                <div class="grid grid--3">
+                    <article class="skill reveal">
+                        <h3>Languages and frameworks</h3>
+                        <p>Python, C#, C++, Go, SQL, HTML, CSS and JavaScript, with React and Next.js for the front end of the internal tooling I build.</p>
+                        <div class="pill-group">
+                            <span class="tag">Python</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Go</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Next.js</span>
+                        </div>
+                    </article>
+
+                    <article class="skill reveal">
+                        <h3>Security and forensics</h3>
+                        <p>Palo Alto firewalls, VPNs, IDS/IPS, Wireshark, Burp Suite, Metasploit and Volatility, alongside evidence acquisition, file system and memory analysis.</p>
+                        <div class="pill-group">
+                            <span class="tag">Palo Alto</span>
+                            <span class="tag">Wireshark</span>
+                            <span class="tag">Burp Suite</span>
+                            <span class="tag">Volatility</span>
+                        </div>
+                    </article>
+
+                    <article class="skill reveal">
+                        <h3>AI, data and automation</h3>
+                        <p>LLMOps, prompt engineering, agentic workflows, knowledge engineering and process automation, with pandas, scikit-learn, Jupyter, Tableau and Power BI on the data side.</p>
+                        <div class="pill-group">
+                            <span class="tag">LLMOps</span>
+                            <span class="tag">Prompt engineering</span>
+                            <span class="tag">Agentic workflows</span>
+                            <span class="tag">Chatbot development</span>
+                            <span class="tag">Tableau</span>
+                        </div>
+                    </article>
+                </div>
+
+                <p style="margin-top:28px">
+                    <a class="btn" href="experience/">Education, skills and experience</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="callout reveal">
+                    <div>
+                        <h3>Currently building AI tooling at SQL VIEW</h3>
+                        <p>
+                            My internship runs alongside the final stretch of my diploma. I am
+                            always glad to talk about anything on this site: the agent work, the
+                            security tooling, or a CTF your team is running.
+                        </p>
+                    </div>
+                    <div class="callout__actions">
+                        <a class="btn btn--primary" href="contact/">Get in touch</a>
+                        <a class="btn btn--ghost" href="https://www.linkedin.com/in/wynston-wong-290189304/" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer__inner">
+            <div>&copy; <span data-year>2026</span> Wynston Wong Jun De. Built by hand, no template.</div>
+            <div class="footer__links">
+                <a href="https://github.com/wyn-cmd" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/wynston-wong-290189304/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="projects/">Projects</a>
+                <a href="contact/">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

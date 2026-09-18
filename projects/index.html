@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Wynston Wong</title>
+    <meta name="description" content="Public projects by Wynston Wong: security tooling, digital forensics utilities, machine learning work and systems programming, all open source on GitHub.">
+    <meta name="theme-color" content="#080b14">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234cc4ff'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='bold' text-anchor='middle' fill='%23041220'%3EW%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        try {
+            var saved = localStorage.getItem("portfolio-theme");
+            if (saved === "light" || saved === "dark") {
+                document.documentElement.setAttribute("data-theme", saved);
+            }
+        } catch (err) {}
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav">
+        <div class="wrap nav__inner">
+            <a class="brand" href="../">
+                <span class="brand__mark">WW</span>
+                <span class="brand__text">
+                    Wynston Wong
+                    <small>Security &amp; AI</small>
+                </span>
+            </a>
+
+            <nav class="nav__links" data-nav-links aria-label="Primary">
+                <a href="../">Home</a>
+                <a href="../projects/" aria-current="page">Projects</a>
+                <a href="../experience/">Experience</a>
+                <a href="../contact/">Contact</a>
+            </nav>
+
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="display:none">
+                    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+                </svg>
+            </button>
+
+            <button class="icon-btn nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="section section--flush" style="padding-top:64px">
+            <div class="wrap">
+                <div class="section__head">
+                    <div class="kicker">Projects</div>
+                    <h2>Thirty-three things I have built and shipped</h2>
+                    <p>
+                        Most of these started as a question I could not answer, or a task I was tired
+                        of doing by hand. Security work comes first, then the machine learning and
+                        agent work I do both at SQL VIEW and on my own time, then the tooling and
+                        coursework that taught me how the pieces fit together. Every entry links to
+                        the source.
+                    </p>
+                </div>
+
+                <div class="filters" role="group" aria-label="Filter projects by area">
+                    <button class="filter" type="button" data-filter="all" aria-pressed="true">All 33</button>
+                    <button class="filter" type="button" data-filter="security" aria-pressed="false">Security &amp; forensics</button>
+                    <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI &amp; machine learning</button>
+                    <button class="filter" type="button" data-filter="systems" aria-pressed="false">Systems &amp; tooling</button>
+                    <button class="filter" type="button" data-filter="coursework" aria-pressed="false">Coursework</button>
+                </div>
+
+                <div class="grid grid--3">
+                    <!-- Security and forensics -->
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">pyvault</h3>
+                            <div class="project__meta">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                                4
+                            </div>
+                        </div>
+                        <p>
+                            An AES-256 file encryptor that asks for two separate passwords before it
+                            will open anything, so a single leaked secret is not enough to walk away
+                            with the contents. Built to understand key derivation and why one factor
+                            is rarely the right number.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Security</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">AES-256</span>
+                                <span class="tag">Key derivation</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/pyvault" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">senitel</h3>
+                            <div class="project__meta">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                                3
+                            </div>
+                        </div>
+                        <p>
+                            A secure AES-256 vault in Python where the key handling is kept simple
+                            enough to read end to end and audit. The point was a vault I could explain
+                            line by line rather than one that leaned on a library for everything.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Security</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">AES-256</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/senitel" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">authlog-sessions</h3>
+                        </div>
+                        <p>
+                            Reads Linux authentication logs and rebuilds the sequence of events behind
+                            them: which addresses tried, which one succeeded, and what ran afterwards.
+                            Reconstructing the story is usually slower than noticing the alert, so this
+                            automates the slow part.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Forensics</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Log analysis</span>
+                                <span class="tag">Threat hunting</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/authlog-sessions" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">net-pulse</h3>
+                        </div>
+                        <p>
+                            Watches active network connections in real time, resolves the process
+                            behind each one, and writes a structured JSON event the first time a
+                            connection appears. Small enough to leave running on a laptop.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Security</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">psutil</span>
+                                <span class="tag">Monitoring</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/net-pulse" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">GuardAIn</h3>
+                        </div>
+                        <p>
+                            A lightweight intrusion detection system for Linux that analyses live
+                            network traffic, pairing anomaly detection with behavioural rules so it
+                            can flag what looks wrong even when it does not match a known signature.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Security</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">IDS</span>
+                                <span class="tag">Anomaly detection</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/GuardAIn" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">Honeypotplusplus</h3>
+                        </div>
+                        <p>
+                            An SSH deception system built on Python and Paramiko that safely captures
+                            attacker credentials, commands and behaviour. Written for SOC and DFIR labs
+                            that want to study real attack techniques without putting production
+                            systems anywhere near the blast radius.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Security</span>
+                                <span class="tag">Paramiko</span>
+                                <span class="tag">Deception</span>
+                                <span class="tag">DFIR</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Honeypotplusplus" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">LLM-SSH-Honeypot</h3>
+                            <div class="project__meta">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                                1
+                            </div>
+                        </div>
+                        <p>
+                            Puts a language model behind the shell prompt of an SSH honeypot, so an
+                            attacker gets a plausible back and forth instead of a scripted response,
+                            while every command and reply is recorded for later analysis.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Security</span>
+                                <span class="tag">LLM</span>
+                                <span class="tag">Honeypot</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/LLM-SSH-Honeypot" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">Incident-Narrator</h3>
+                        </div>
+                        <p>
+                            Parses a PCAP file and writes a human-readable report of what happened on
+                            the wire, aimed at the people who need the conclusion rather than four
+                            thousand lines of packet detail.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Forensics</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">PCAP</span>
+                                <span class="tag">Reporting</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Incident-Narrator" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">NTFS-MFT-parser</h3>
+                        </div>
+                        <p>
+                            An attempt at parsing MFT records directly out of an NTFS volume, which is
+                            where file creation, modification and deletion timestamps actually live and
+                            where a lot of timeline work begins.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Forensics</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">NTFS</span>
+                                <span class="tag">Timeline</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/NTFS-MFT-parser" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">pyAesBrute</h3>
+                        </div>
+                        <p>
+                            A password brute forcer for AesCrypt and pyAesCrypt containers. The
+                            interesting part was never the speed, it was learning what makes a
+                            passphrase guessable and how much that costs an attacker per guess.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Offensive</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Password cracking</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/pyAesBrute" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">prime-keys</h3>
+                            <div class="project__meta">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                                1
+                            </div>
+                        </div>
+                        <p>
+                            Builds a large base64 encoded key out of two large primes, with control
+                            over the seed needed to regenerate it. A hands-on look at why the
+                            randomness underneath a key matters as much as its length.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Cryptography</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Primes</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/prime-keys" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="security">
+                        <div class="project__top">
+                            <h3 class="project__name">corrupter</h3>
+                        </div>
+                        <p>
+                            A proof of concept that slowly reads and corrupts files on a system. Useful
+                            for studying how corruption spreads, what it looks like at the file system
+                            level, and how detection might catch it early.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--accent">Security</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">File systems</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/corrupter" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- AI and machine learning -->
+                    <article class="project" data-category="ai">
+                        <div class="project__top">
+                            <h3 class="project__name">character-forge</h3>
+                            <div class="project__meta">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                                1
+                            </div>
+                        </div>
+                        <p>
+                            A terminal roleplay engine for the Gemini API with folder-per-character
+                            personas, memory banks, group chats and free-tier budget tracking, so a
+                            long session does not quietly run into a quota wall.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--green">AI / ML</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Gemini API</span>
+                                <span class="tag">LLM</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/character-forge" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="ai">
+                        <div class="project__top">
+                            <h3 class="project__name">rag-from-scratch</h3>
+                        </div>
+                        <p>
+                            A retrieval augmented generation pipeline with nothing hidden behind a
+                            framework: chunking, embeddings, cosine similarity search and prompt
+                            assembly each sit behind a small swappable interface, so you can see where
+                            retrieval quality is actually lost.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--green">AI / ML</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Embeddings</span>
+                                <span class="tag">RAG</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/rag-from-scratch" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="ai">
+                        <div class="project__top">
+                            <h3 class="project__name">AITT-Assignment</h3>
+                        </div>
+                        <p>
+                            Log-based behavioural anomaly detection on the HDFS dataset, built for an
+                            AI tools and techniques module. Decision tree classifiers compared against
+                            each other with precision, recall and F1 as the yardstick.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--green">AI / ML</span>
+                                <span class="tag">Jupyter</span>
+                                <span class="tag">scikit-learn</span>
+                                <span class="tag">Anomaly detection</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/AITT-Assignment" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="ai">
+                        <div class="project__top">
+                            <h3 class="project__name">To-Orpheus-Or-Not</h3>
+                        </div>
+                        <p>
+                            Trains a model on a set of images and learns to sort them into classes,
+                            written as an exercise in the full training loop rather than a single
+                            library call: loading, splitting, fitting and checking.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--green">AI / ML</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Computer vision</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/To-Orpheus-Or-Not" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="ai">
+                        <div class="project__top">
+                            <h3 class="project__name">Machine-Predictor</h3>
+                        </div>
+                        <p>
+                            Predicts housing prices from a CSV using pandas, cleaning and shaping the
+                            data first. A useful reminder that most of the work in a model is the part
+                            that happens before the modelling.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag tag--green">AI / ML</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">pandas</span>
+                                <span class="tag">Regression</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Machine-Predictor" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Systems and tooling -->
+                    <article class="project" data-category="systems">
+                        <div class="project__top">
+                            <h3 class="project__name">vnds-converter</h3>
+                        </div>
+                        <p>
+                            Converts Ren'Py visual novels into the asset formats and scripting language
+                            VNDS expects, which is how a desktop game ends up playable on a DS flash
+                            card. Written because doing it by hand, title by title, stopped being fun
+                            about two games in.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Tooling</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Ren'Py</span>
+                                <span class="tag">File formats</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/vnds-converter" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="systems">
+                        <div class="project__top">
+                            <h3 class="project__name">S.I.D</h3>
+                        </div>
+                        <p>
+                            Firmware and detection logic for a device that attaches under a seat and
+                            looks for belongings left behind. Built with a team as a hardware project,
+                            from the sensor choice through to how the alert reaches staff.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">Hardware</span>
+                                <span class="tag">Sensors</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/S.I.D" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="systems">
+                        <div class="project__top">
+                            <h3 class="project__name">simple-http-webserver</h3>
+                            <div class="project__meta">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                                1
+                            </div>
+                        </div>
+                        <p>
+                            A small HTTP server written in Python to see what a framework hides:
+                            request parsing, routing, status codes and response headers, all by hand.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">HTTP</span>
+                                <span class="tag">Networking</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/simple-http-webserver" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="systems">
+                        <div class="project__top">
+                            <h3 class="project__name">Web-Post-Scraper</h3>
+                        </div>
+                        <p>
+                            Collects posts from a web endpoint that offers no API, then displays them in
+                            a readable list. Written for a site where checking for updates by hand was
+                            the only other option.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Scraping</span>
+                                <span class="tag">HTTP</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Web-Post-Scraper" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="systems">
+                        <div class="project__top">
+                            <h3 class="project__name">IDE_code</h3>
+                        </div>
+                        <p>
+                            Code from a school project to build an integrated development environment,
+                            covering the editor side of the problem rather than the language side.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">Tooling</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/IDE_code" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="systems">
+                        <div class="project__top">
+                            <h3 class="project__name">PRG2-T08-09</h3>
+                        </div>
+                        <p>
+                            A C# group project from the programming module, built around object-oriented
+                            design and a class structure the whole team could work against without
+                            stepping on each other.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">C#</span>
+                                <span class="tag">OOP</span>
+                                <span class="tag">Team project</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/PRG2-T08-09" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Coursework and practice -->
+                    <article class="project" data-category="coursework">
+                        <div class="project__top">
+                            <h3 class="project__name">PyDiary</h3>
+                            <div class="project__meta">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                                1
+                            </div>
+                        </div>
+                        <p>
+                            A command line diary that stores entries on disk, with writing, reading and
+                            listing handled through a simple menu. One of the first programs I wrote
+                            that kept data between runs.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">CLI</span>
+                                <span class="tag">File I/O</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/PyDiary" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="coursework">
+                        <div class="project__top">
+                            <h3 class="project__name">Classy-Hangman</h3>
+                        </div>
+                        <p>
+                            Hangman in the terminal, used as an excuse to practise class design and to
+                            keep game state separate from the code that draws it.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">OOP</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Classy-Hangman" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="coursework">
+                        <div class="project__top">
+                            <h3 class="project__name">Classes-Quiz-Exercise</h3>
+                        </div>
+                        <p>
+                            Loads a list of questions from a text file and quizzes the user on them,
+                            keeping score along the way. A small exercise in classes and reading
+                            structured input.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">OOP</span>
+                                <span class="tag">File I/O</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Classes-Quiz-Exercise" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="coursework">
+                        <div class="project__top">
+                            <h3 class="project__name">Maze-Solver</h3>
+                        </div>
+                        <p>
+                            Works through a maze using loops and grid traversal, written as a first pass
+                            at search logic before reaching for a proper algorithm.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Algorithms</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Maze-Solver" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="coursework">
+                        <div class="project__top">
+                            <h3 class="project__name">Streamer-CSV</h3>
+                        </div>
+                        <p>
+                            Reads a CSV of streamer data and arranges it into a readable summary, which
+                            is mostly an exercise in sorting and shaping rows without losing any.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">CSV</span>
+                                <span class="tag">Data handling</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Streamer-CSV" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="coursework">
+                        <div class="project__top">
+                            <h3 class="project__name">Fuzzy-Movie-Exercise</h3>
+                        </div>
+                        <p>
+                            Uses fuzzy matching to search a CSV of films, so a slightly misspelled title
+                            still finds the right one. A gentle introduction to string similarity and
+                            why exact matching is often the wrong tool.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Fuzzy matching</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Fuzzy-Movie-Exercise" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="coursework">
+                        <div class="project__top">
+                            <h3 class="project__name">Formalifier</h3>
+                        </div>
+                        <p>
+                            Takes informal text and swaps it into a formal register using a CSV
+                            dictionary of replacements. Small, but the first time I saw a lookup table
+                            do the work of a paragraph of code.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Text processing</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Formalifier" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="coursework">
+                        <div class="project__top">
+                            <h3 class="project__name">Sunshine-Farm</h3>
+                        </div>
+                        <p>
+                            A command line farming simulator with crops, days and money. Small but
+                            complete, and the first program I wrote where the game loop itself was the
+                            interesting problem.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">CLI</span>
+                                <span class="tag">Game loop</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/Sunshine-Farm" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="coursework">
+                        <div class="project__top">
+                            <h3 class="project__name">term-project</h3>
+                        </div>
+                        <p>
+                            A cooking recipe website built with hand-written HTML and CSS for a term
+                            project, laid out before I knew what a framework was.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">Web</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/term-project" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="coursework">
+                        <div class="project__top">
+                            <h3 class="project__name">web</h3>
+                        </div>
+                        <p>
+                            A small hand-written HTML site, kept around as a marker of where the web
+                            work started.
+                        </p>
+                        <div class="project__foot">
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">Web</span>
+                            </div>
+                            <p style="margin-top:14px">
+                                <a class="project__link" href="https://github.com/wyn-cmd/web" target="_blank" rel="noopener">
+                                    View source
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="empty" data-empty style="display:none">Nothing in that category yet.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="callout">
+                    <div>
+                        <h3>Want the full account?</h3>
+                        <p>
+                            There are forks, half-finished experiments and older coursework
+                            repositories on GitHub that did not make the cut here.
+                        </p>
+                    </div>
+                    <div class="callout__actions">
+                        <a class="btn btn--primary" href="https://github.com/wyn-cmd?tab=repositories" target="_blank" rel="noopener">All repositories</a>
+                        <a class="btn btn--ghost" href="../experience/">Read the CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer__inner">
+            <div>&copy; <span data-year>2026</span> Wynston Wong Jun De. Built by hand, no template.</div>
+            <div class="footer__links">
+                <a href="https://github.com/wyn-cmd" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/wynston-wong-290189304/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="../projects/">Projects</a>
+                <a href="../contact/">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
