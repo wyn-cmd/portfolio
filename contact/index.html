@@ -4,27 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Wynston Wong</title>
+    
     <meta name="description" content="Get in touch with Wynston Wong Jun De, a Cybersecurity and Digital Forensics student at Ngee Ann Polytechnic, for internships, CTF teams and security work.">
+    
+    <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Wynston Wong">
     <meta property="og:title" content="Contact | Wynston Wong">
     <meta property="og:description" content="Get in touch with Wynston Wong Jun De, a Cybersecurity and Digital Forensics student at Ngee Ann Polytechnic, for internships, CTF teams and security work.">
     <meta property="og:url" content="https://wyn-cmd.github.io/portfolio/contact/">
     <meta name="twitter:card" content="summary">
+    
+    <!-- Theme & Branding -->
     <meta name="theme-color" content="#080b14" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234cc4ff'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='bold' text-anchor='middle' fill='%23041220'%3EW%3C/text%3E%3C/svg%3E">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="../style.css">
+
     <script>
-        try {
-            var saved = localStorage.getItem("portfolio-theme");
-            if (saved === "light" || saved === "dark") {
-                document.documentElement.setAttribute("data-theme", saved);
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem("portfolio-theme");
+                if (savedTheme === "light" || savedTheme === "dark") {
+                    document.documentElement.setAttribute("data-theme", savedTheme);
+                }
+            } catch (err) {
+                // Silent fail for restricted localStorage environments
             }
-        } catch (err) {}
+        })();
     </script>
 </head>
 <body>
@@ -47,7 +58,7 @@
                 <a href="../contact/" aria-current="page">Contact</a>
             </nav>
 
-            <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme">
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme">
                 <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
                     <circle cx="12" cy="12" r="4"></circle>
                     <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
@@ -104,10 +115,11 @@
                         </span>
                     </a>
 
-                    <!--
-                        Add a third card here once you are happy to publish an email address.
-                        Copy the block for GitHub above and swap the text and href:
-                        <span><b>Email</b><span>you@example.com</span></span> with href="mailto:you@example.com"
+                    <!-- Add email card here when ready: 
+                         <a class="contact-card reveal" href="mailto:you@example.com">
+                            <span class="contact-card__icon" aria-hidden="true">...</span>
+                            <span><b>Email</b><span>you@example.com</span></span>
+                         </a> 
                     -->
 
                     <div class="contact-card reveal" style="cursor:default">
