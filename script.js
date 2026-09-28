@@ -1,5 +1,5 @@
 /* Portfolio interactivity: theme toggle, mobile nav, project filters,
-   scroll reveal and the small terminal typing effect on the home page. */
+   scroll reveal & the small terminal typing effect on the home page. */
 
 (function () {
     "use strict";
