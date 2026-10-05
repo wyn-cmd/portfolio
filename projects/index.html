@@ -66,7 +66,11 @@
 <div class="wrap">
 <div class="section__head">
 <div class="kicker">Projects</div>
+<<<<<<< Updated upstream
 <h2>Forty-four things I have built &amp; shipped</h2>
+=======
+<h2>Forty-seven things I have built &amp; shipped</h2>
+>>>>>>> Stashed changes
 <p>
                         Most of these started as a question I could not answer, or a task I was tired
                         of doing by hand. Security work comes first, then the machine learning &amp;
@@ -82,13 +86,175 @@
 <img alt="Snake animation" src="https://raw.githubusercontent.com/wyn-cmd/wyn-cmd/output/github-contribution-grid-snake.svg" style="max-width: 100%; border-radius: 12px; margin: 0 auto; display: block;"/>
 </div>
 <div aria-label="Filter projects by area" class="filters" role="group">
-<button aria-pressed="true" class="filter" data-filter="all" type="button">All 41</button>
+<button aria-pressed="true" class="filter" data-filter="all" type="button">All 47</button>
 <button aria-pressed="false" class="filter" data-filter="security" type="button">Security &amp; forensics</button>
 <button aria-pressed="false" class="filter" data-filter="ai" type="button">AI &amp; machine learning</button>
 <button aria-pressed="false" class="filter" data-filter="systems" type="button">Systems &amp; tooling</button>
 <button aria-pressed="false" class="filter" data-filter="coursework" type="button">Coursework</button>
 </div>
 <div class="grid grid--3">
+
+<article class="project" data-category="systems">
+<div class="project__top">
+<h3 class="project__name">cron-lint</h3>
+<div class="project__meta">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"></path></svg>
+1
+</div>
+</div>
+<p>
+Checks crontab schedule files for syntax errors, reversed ranges, impossible calendar dates and conflicting schedule restrictions before deployment. Built to catch silent failures and misconfigured automation jobs before they quietly drop or misfire.
+</p>
+<div class="project__foot">
+<div class="tags">
+<span class="tag tag--accent">Systems</span>
+<span class="tag">Python</span>
+<span class="tag">Cron</span>
+<span class="tag">Automation</span>
+</div>
+<p style="margin-top:14px">
+<a class="project__link" href="https://github.com/wyn-cmd/cron-lint" rel="noopener" target="_blank">
+View source
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+</a>
+</p>
+</div>
+</article>
+
+<article class="project" data-category="security">
+<div class="project__top">
+<h3 class="project__name">mcp-config-audit</h3>
+<div class="project__meta">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"></path></svg>
+1
+</div>
+</div>
+<p>
+Audits Model Context Protocol configuration files for risky settings, unpinned packages and unauthorized shell wrappers. Built to verify agent permissions before granting local execution access.
+</p>
+<div class="project__foot">
+<div class="tags">
+<span class="tag tag--accent">Security</span>
+<span class="tag">Python</span>
+<span class="tag">MCP</span>
+<span class="tag">Auditing</span>
+</div>
+<p style="margin-top:14px">
+<a class="project__link" href="https://github.com/wyn-cmd/mcp-config-audit" rel="noopener" target="_blank">
+View source
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+</a>
+</p>
+</div>
+</article>
+
+<article class="project" data-category="ai">
+<div class="project__top">
+<h3 class="project__name">sift-agent</h3>
+<div class="project__meta">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"></path></svg>
+1
+</div>
+</div>
+<p>
+Investigates Windows memory images using read-only Volatility plugins driven by a language model, with every claim verified against raw tool output logs. Built to combine forensic analysis with automated verification.
+</p>
+<div class="project__foot">
+<div class="tags">
+<span class="tag tag--green">AI &amp; ML</span>
+<span class="tag">Python</span>
+<span class="tag">Forensics</span>
+<span class="tag">Gemini</span>
+</div>
+<p style="margin-top:14px">
+<a class="project__link" href="https://github.com/wyn-cmd/sift-agent" rel="noopener" target="_blank">
+View source
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+</a>
+</p>
+</div>
+</article>
+
+<article class="project" data-category="security">
+<div class="project__top">
+<h3 class="project__name">sqlite-carve</h3>
+<div class="project__meta">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"></path></svg>
+1
+</div>
+</div>
+<p>
+Recovers deleted rows and leftover text fragments directly from SQLite database files without relying on database engine recovery functions. Built for low-level data recovery and forensic artifact extraction.
+</p>
+<div class="project__foot">
+<div class="tags">
+<span class="tag tag--accent">Security</span>
+<span class="tag">Python</span>
+<span class="tag">Forensics</span>
+<span class="tag">SQLite</span>
+</div>
+<p style="margin-top:14px">
+<a class="project__link" href="https://github.com/wyn-cmd/sqlite-carve" rel="noopener" target="_blank">
+View source
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+</a>
+</p>
+</div>
+</article>
+
+<article class="project" data-category="security">
+<div class="project__top">
+<h3 class="project__name">workflow-pin-audit</h3>
+<div class="project__meta">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"></path></svg>
+1
+</div>
+</div>
+<p>
+Scans GitHub Actions workflow files for mutable action tags, unpinned container digests and excessive token permissions. Built to harden CI/CD pipelines against supply chain compromise.
+</p>
+<div class="project__foot">
+<div class="tags">
+<span class="tag tag--accent">Security</span>
+<span class="tag">Python</span>
+<span class="tag">CI/CD</span>
+<span class="tag">Supply chain</span>
+</div>
+<p style="margin-top:14px">
+<a class="project__link" href="https://github.com/wyn-cmd/workflow-pin-audit" rel="noopener" target="_blank">
+View source
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+</a>
+</p>
+</div>
+</article>
+
+<article class="project" data-category="systems">
+<div class="project__top">
+<h3 class="project__name">wyn-cmd</h3>
+<div class="project__meta">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"></path></svg>
+1
+</div>
+</div>
+<p>
+Personal profile repository hosting GitHub configuration entry points, contribution widgets and profile metadata. Built as the central hub for public repository management.
+</p>
+<div class="project__foot">
+<div class="tags">
+<span class="tag tag--accent">Systems</span>
+<span class="tag">GitHub</span>
+<span class="tag">Config</span>
+</div>
+<p style="margin-top:14px">
+<a class="project__link" href="https://github.com/wyn-cmd/wyn-cmd" rel="noopener" target="_blank">
+View source
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+</a>
+</p>
+</div>
+</article>
+
  Security &amp; forensics 
 <article class="project" data-category="security">
 <div class="project__top">
@@ -113,66 +279,6 @@ using only the Python standard library.
 </div>
 <p style="margin-top:14px">
 <a class="project__link" href="https://github.com/wyn-cmd/evtx-triage" rel="noopener" target="_blank">
-View source
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-</a>
-</p>
-</div>
-</article>
-
-<article class="project" data-category="security">
-<div class="project__top">
-<h3 class="project__name">sift-agent</h3>
-</div>
-<p>
-Memory forensics agent: a Gemini model drives four read-only Volatility 3 plugins and every claim is checked against an audit log.
-</p>
-<div class="project__foot">
-<div class="tags">
-<span class="tag">Security</span><span class="tag">Python</span><span class="tag">Forensics</span><span class="tag">Volatility</span>
-</div>
-<p style="margin-top:14px">
-<a class="project__link" href="https://github.com/wyn-cmd/sift-agent" rel="noopener" target="_blank">
-View source
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-</a>
-</p>
-</div>
-</article>
-
-<article class="project" data-category="security">
-<div class="project__top">
-<h3 class="project__name">sqlite-carve</h3>
-</div>
-<p>
-Recover deleted rows and leftover text from SQLite database files without using sqlite3.
-</p>
-<div class="project__foot">
-<div class="tags">
-<span class="tag">Security</span><span class="tag">Python</span><span class="tag">Forensics</span><span class="tag">SQLite</span>
-</div>
-<p style="margin-top:14px">
-<a class="project__link" href="https://github.com/wyn-cmd/sqlite-carve" rel="noopener" target="_blank">
-View source
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-</a>
-</p>
-</div>
-</article>
-
-<article class="project" data-category="systems">
-<div class="project__top">
-<h3 class="project__name">cron-lint</h3>
-</div>
-<p>
-Static checker for crontab files: dead schedules, impossible dates and wrong field formats.
-</p>
-<div class="project__foot">
-<div class="tags">
-<span class="tag">Systems</span><span class="tag">Python</span><span class="tag">Tooling</span><span class="tag">Cron</span>
-</div>
-<p style="margin-top:14px">
-<a class="project__link" href="https://github.com/wyn-cmd/cron-lint" rel="noopener" target="_blank">
 View source
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg>
 </a>

@@ -9,7 +9,7 @@ Plain HTML, CSS & JavaScript. No build step, no dependencies, no framework, no p
 ## Pages
 
 - `index.html` - introduction, profile summary, headline numbers, three focus areas & six selected projects
-- `projects/index.html` - all 41 non-fork GitHub projects, split into security & forensics, AI & machine learning, systems & tooling, & coursework, with filter buttons
+- `projects/index.html` - all 47 non-fork GitHub projects, split into security & forensics, AI & machine learning, systems & tooling, & coursework, with filter buttons
 - `experience/index.html` - education, work, the nine skill areas, competition results, leadership & volunteering, & referees
 - `contact/index.html` - contact channels & the kind of work I am looking for
 
@@ -49,7 +49,7 @@ Then visit http://localhost:8000/ & http://localhost:8000/projects/.
 
 - Add a project by copying an existing card in `projects/index.html` & setting `data-category` to `security`, `ai`, `systems` or `coursework`. The filter buttons pick it up automatically.
 - Add a page as `pagename/index.html`, reference the shared assets as `../style.css` & `../script.js`, then add it to the four nav blocks & both footer link lists.
-- Project counts are written by hand: the "All 41" filter button, the headline on the projects page & the stat blocks. Update them when the count changes.
+- Project counts are written by hand: the "All 47" filter button, the headline on the projects page & the stat blocks. Update them when the count changes.
 - Referee entries list names & roles only, on purpose. Do not add personal phone numbers or email addresses to this site.
 
 ## Content sources
