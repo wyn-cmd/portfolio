@@ -54,4 +54,4 @@ Then visit http://localhost:8000/ & http://localhost:8000/projects/.
 
 ## Content sources
 
-Material came from the CV, from the public repositories under [wyn-cmd](https://github.com/wyn-cmd), & from the LinkedIn profile at [linkedin.com/in/wynston-wong-290189304](https://www.linkedin.com/in/wynston-wong-290189304/). LinkedIn is the source for the SQL VIEW internship, the React & Next.js skills, the LLMOps & agentic workflow skills, the Year 2 Semester 2 Class Chairperson role, & the 4G Class Chairperson & Head of Training ICs positions at Greendale.
+Material came from public repositories under [wyn-cmd](https://github.com/wyn-cmd), & from my LinkedIn profile at [linkedin.com/in/wynston-wong-290189304](https://www.linkedin.com/in/wynston-wong-290189304/).
