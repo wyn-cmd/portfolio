@@ -1,6 +1,6 @@
 # Wynston Wong - Portfolio
 
-Personal portfolio site for Wynston Wong Jun De, an Artificial Intelligence Engineer Intern at SQL VIEW & a Cybersecurity & Digital Forensics student at Ngee Ann Polytechnic specialising in AI & Machine Learning.
+Personal portfolio site for myself.
 
 Live site: https://wyn-cmd.github.io/portfolio/
 
