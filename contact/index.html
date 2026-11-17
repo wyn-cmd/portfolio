@@ -1,246 +1,191 @@
 <!DOCTYPE html>
-<html data-theme="dark" lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Contact | Wynston Wong</title>
-    <meta content="Get in touch with Wynston Wong Jun De, a Cybersecurity &amp; Digital Forensics student at Ngee Ann Polytechnic, for internships, CTF teams &amp; security work." name="description"/>
-    <!-- Open Graph / Social -->
-    <meta content="website" property="og:type"/>
-    <meta content="Wynston Wong" property="og:site_name"/>
-    <meta content="Contact | Wynston Wong" property="og:title"/>
-    <meta content="Get in touch with Wynston Wong Jun De, a Cybersecurity &amp; Digital Forensics student at Ngee Ann Polytechnic, for internships, CTF teams &amp; security work." property="og:description"/>
-    <meta content="https://wyn-cmd.github.io/portfolio/contact/" property="og:url"/>
-    <meta content="summary" name="twitter:card"/>
-    <!-- Theme & Branding -->
-    <meta content="#16191f" media="(prefers-color-scheme: dark)" name="theme-color"/>
-    <meta content="#fbf9f4" media="(prefers-color-scheme: light)" name="theme-color"/>
-    <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316191f'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='17' font-weight='600' text-anchor='middle' fill='%23f5b84a'%3EW%3C/text%3E%3C/svg%3E" rel="icon"/>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600&amp;family=Atkinson+Hyperlegible+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-    <link href="../style.css" rel="stylesheet"/>
-    <script>
-        (function() {
-            try {
-                const savedTheme = localStorage.getItem("portfolio-theme");
-                if (savedTheme === "light" || savedTheme === "dark") {
-                    document.documentElement.setAttribute("data-theme", savedTheme);
-                }
-            } catch (err) {
-                // Silent fail for restricted localStorage environments
-            }
-        })();
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Wynston Wong</title>
+<meta name="description" content="Contact Wynston Wong, an AI engineer intern at SQL VIEW: LinkedIn, GitHub, location &amp; availability, and the kinds of work to talk about.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wynston Wong">
+<meta property="og:title" content="Contact | Wynston Wong">
+<meta property="og:description" content="Contact Wynston Wong, an AI engineer intern at SQL VIEW: LinkedIn, GitHub, location &amp; availability, and the kinds of work to talk about.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f7fb">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1220">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1220'/%3E%3Ctext x='16' y='24' font-family='Arial,sans-serif' font-weight='900' font-size='22' text-anchor='middle' fill='%235cc0ff'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="../style.css">
+<script>
+// Apply the saved colour theme (else the visitor's system setting) before first paint.
+try {
+  var saved = localStorage.getItem("portfolio-theme");
+  var theme = saved === "light" || saved === "dark" ? saved : "dark";
+  document.documentElement.setAttribute("data-theme", theme);
+} catch (err) {}
+</script>
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="nav">
-        <div class="wrap nav__inner">
-            <a class="brand" href="../">
-                <span class="brand__mark">WW</span>
-                <span class="brand__text">
-                    Wynston Wong
-                    <small>Security &amp; AI</small>
-                </span>
-            </a>
-            <nav aria-label="Primary" class="nav__links" data-nav-links="" id="primary-nav">
-                <a href="../">Home</a>
-                <a href="../projects/">Projects</a>
-                <a href="../experience/">Experience</a>
-                <a aria-current="page" href="../contact/">Contact</a>
-            </nav>
-            <button aria-label="Switch theme" class="icon-btn" data-theme-toggle="" type="button">
-                <svg aria-hidden="true" class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="4"></circle>
-                    <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
-                </svg>
-                <svg aria-hidden="true" class="icon-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" style="display:none" viewBox="0 0 24 24">
-                    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
-                </svg>
-            </button>
-            <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu" class="icon-btn nav__toggle" data-nav-toggle="" type="button">
-                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewBox="0 0 24 24">
-                    <path d="M4 7h16M4 12h16M4 17h16"></path>
-                </svg>
-            </button>
-        </div>
-    </header>
-    <main id="main">
-        <section class="section section--flush" style="padding-top:64px">
-            <div class="wrap">
-                <div class="contact-intro">
-                <div class="section__head">
-                    <h2>Say hello</h2>
-                    <div class="kicker">Contact</div>
-                    <p>
-                        I am currently an Artificial Intelligence Engineer Intern at SQL VIEW,
-                        building self-hosted AI agent tooling, while finishing my diploma in
-                        Cybersecurity &amp; Digital Forensics. I am always up for a conversation about
-                        AI agents, CTFs, honeypots or network traffic that looks slightly wrong.
-                    </p>
-                </div>
-                <div class="contact-photo">
-<img alt="Wynston Wong Jun De" src="../assets/profile/wynston-profile.jpg"/>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs><symbol id="l-bot" viewBox="0 0 24 24"><path d="M12 8V4H8" />
+  <rect width="16" height="12" x="4" y="8" rx="2" />
+  <path d="M2 14h2" />
+  <path d="M20 14h2" />
+  <path d="M15 13v2" />
+  <path d="M9 13v2" /></symbol><symbol id="l-brain-circuit" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+  <path d="M9 13a4.5 4.5 0 0 0 3-4" />
+  <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+  <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+  <path d="M6 18a4 4 0 0 1-1.967-.516" />
+  <path d="M12 13h4" />
+  <path d="M12 18h6a2 2 0 0 1 2 2v1" />
+  <path d="M12 8h8" />
+  <path d="M16 8V5a2 2 0 0 1 2-2" />
+  <circle cx="16" cy="13" r=".5" />
+  <circle cx="18" cy="3" r=".5" />
+  <circle cx="20" cy="21" r=".5" />
+  <circle cx="20" cy="8" r=".5" /></symbol><symbol id="l-bug" viewBox="0 0 24 24"><path d="m8 2 1.88 1.88" />
+  <path d="M14.12 3.88 16 2" />
+  <path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1" />
+  <path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6" />
+  <path d="M12 20v-9" />
+  <path d="M6.53 9C4.6 8.8 3 7.1 3 5" />
+  <path d="M6 13H2" />
+  <path d="M3 21c0-2.1 1.7-3.9 3.8-4" />
+  <path d="M20.97 5c0 2.1-1.6 3.8-3.5 4" />
+  <path d="M22 13h-4" />
+  <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4" /></symbol><symbol id="l-chart-column" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16" />
+  <path d="M18 17V9" />
+  <path d="M13 17V5" />
+  <path d="M8 17v-3" /></symbol><symbol id="l-code-xml" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4" />
+  <path d="m6 8-4 4 4 4" />
+  <path d="m14.5 4-5 16" /></symbol><symbol id="l-cpu" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2" />
+  <rect width="6" height="6" x="9" y="9" rx="1" />
+  <path d="M15 2v2" />
+  <path d="M15 20v2" />
+  <path d="M2 15h2" />
+  <path d="M2 9h2" />
+  <path d="M20 15h2" />
+  <path d="M20 9h2" />
+  <path d="M9 2v2" />
+  <path d="M9 20v2" /></symbol><symbol id="l-file-pen-line" viewBox="0 0 24 24"><path d="m18 5-2.414-2.414A2 2 0 0 0 14.172 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2" />
+  <path d="M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+  <path d="M8 18h1" /></symbol><symbol id="l-file-search" viewBox="0 0 24 24"><path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" />
+  <path d="m9 18-1.5-1.5" />
+  <circle cx="5" cy="14" r="3" /></symbol><symbol id="l-file-spreadsheet" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M8 13h2" />
+  <path d="M14 13h2" />
+  <path d="M8 17h2" />
+  <path d="M14 17h2" /></symbol><symbol id="l-fingerprint" viewBox="0 0 24 24"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4" />
+  <path d="M14 13.12c0 2.38 0 6.38-1 8.88" />
+  <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02" />
+  <path d="M2 12a10 10 0 0 1 18-6" />
+  <path d="M2 16h.01" />
+  <path d="M21.8 16c.2-2 .131-5.354 0-6" />
+  <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2" />
+  <path d="M8.65 22c.21-.66.45-1.32.57-2" />
+  <path d="M9 6.8a6 6 0 0 1 9 5.2v2" /></symbol><symbol id="l-gamepad-2" viewBox="0 0 24 24"><line x1="6" x2="10" y1="11" y2="11" />
+  <line x1="8" x2="8" y1="9" y2="13" />
+  <line x1="15" x2="15.01" y1="12" y2="12" />
+  <line x1="18" x2="18.01" y1="10" y2="10" />
+  <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" /></symbol><symbol id="l-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" />
+  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+  <path d="M2 12h20" /></symbol><symbol id="l-hard-drive" viewBox="0 0 24 24"><line x1="22" x2="2" y1="12" y2="12" />
+  <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+  <line x1="6" x2="6.01" y1="16" y2="16" />
+  <line x1="10" x2="10.01" y1="16" y2="16" /></symbol><symbol id="l-lock-keyhole" viewBox="0 0 24 24"><circle cx="12" cy="16" r="1" />
+  <rect x="3" y="10" width="18" height="12" rx="2" />
+  <path d="M7 10V7a5 5 0 0 1 10 0v3" /></symbol><symbol id="l-network" viewBox="0 0 24 24"><rect x="16" y="16" width="6" height="6" rx="1" />
+  <rect x="2" y="16" width="6" height="6" rx="1" />
+  <rect x="9" y="2" width="6" height="6" rx="1" />
+  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+  <path d="M12 12V8" /></symbol><symbol id="l-pin" viewBox="0 0 24 24"><path d="M12 17v5" />
+  <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z" /></symbol><symbol id="l-scan-search" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2" />
+  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+  <circle cx="12" cy="12" r="3" />
+  <path d="m16 16-1.9-1.9" /></symbol><symbol id="l-scroll-text" viewBox="0 0 24 24"><path d="M15 12h-5" />
+  <path d="M15 8h-5" />
+  <path d="M19 17V5a2 2 0 0 0-2-2H4" />
+  <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3" /></symbol><symbol id="l-shapes" viewBox="0 0 24 24"><path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" />
+  <rect x="3" y="14" width="7" height="7" rx="1" />
+  <circle cx="17.5" cy="17.5" r="3.5" /></symbol><symbol id="l-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" /></symbol><symbol id="l-user-round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5" />
+  <path d="M20 21a8 8 0 0 0-16 0" /></symbol><symbol id="s-cplusplus" viewBox="0 0 24 24"><path d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.11-7.11a7.133 7.133 0 016.156 3.553l-3.076 1.78a3.567 3.567 0 00-3.08-1.78A3.56 3.56 0 008.444 12 3.56 3.56 0 0012 15.555a3.57 3.57 0 003.08-1.778l3.078 1.78A7.135 7.135 0 0112 19.11zm7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z"/></symbol><symbol id="s-csharp" viewBox="0 0 24 24"><path d="M1.194 7.543v8.913c0 1.103.588 2.122 1.544 2.674l7.718 4.456a3.086 3.086 0 0 0 3.088 0l7.718-4.456a3.087 3.087 0 0 0 1.544-2.674V7.543a3.084 3.084 0 0 0-1.544-2.673L13.544.414a3.086 3.086 0 0 0-3.088 0L2.738 4.87a3.085 3.085 0 0 0-1.544 2.673Zm5.403 2.914v3.087a.77.77 0 0 0 .772.772.773.773 0 0 0 .772-.772.773.773 0 0 1 1.317-.546.775.775 0 0 1 .226.546 2.314 2.314 0 1 1-4.631 0v-3.087c0-.615.244-1.203.679-1.637a2.312 2.312 0 0 1 3.274 0c.434.434.678 1.023.678 1.637a.769.769 0 0 1-.226.545.767.767 0 0 1-1.091 0 .77.77 0 0 1-.226-.545.77.77 0 0 0-.772-.772.771.771 0 0 0-.772.772Zm12.35 3.087a.77.77 0 0 1-.772.772h-.772v.772a.773.773 0 0 1-1.544 0v-.772h-1.544v.772a.773.773 0 0 1-1.317.546.775.775 0 0 1-.226-.546v-.772H12a.771.771 0 1 1 0-1.544h.772v-1.543H12a.77.77 0 1 1 0-1.544h.772v-.772a.773.773 0 0 1 1.317-.546.775.775 0 0 1 .226.546v.772h1.544v-.772a.773.773 0 0 1 1.544 0v.772h.772a.772.772 0 0 1 0 1.544h-.772v1.543h.772a.776.776 0 0 1 .772.772Zm-3.088-2.315h-1.544v1.543h1.544v-1.543Z"/></symbol><symbol id="s-html5" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></symbol><symbol id="s-jupyter" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"/></symbol><symbol id="s-markdown" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 010 17.655V6.345a1.73 1.73 0 011.73-1.73h20.54A1.73 1.73 0 0124 6.345v11.308a1.73 1.73 0 01-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></symbol><symbol id="s-python" viewBox="0 0 24 24"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></symbol><symbol id="s-rust" viewBox="0 0 24 24"><path d="M23.8346 11.7033l-1.0073-.6236a13.7268 13.7268 0 00-.0283-.2936l.8656-.8069a.3483.3483 0 00-.1154-.578l-1.1066-.414a8.4958 8.4958 0 00-.087-.2856l.6904-.9587a.3462.3462 0 00-.2257-.5446l-1.1663-.1894a9.3574 9.3574 0 00-.1407-.2622l.49-1.0761a.3437.3437 0 00-.0274-.3361.3486.3486 0 00-.3006-.154l-1.1845.0416a6.7444 6.7444 0 00-.1873-.2268l.2723-1.153a.3472.3472 0 00-.417-.4172l-1.1532.2724a14.0183 14.0183 0 00-.2278-.1873l.0415-1.1845a.3442.3442 0 00-.49-.328l-1.076.491c-.0872-.0476-.1742-.0952-.2623-.1407l-.1903-1.1673A.3483.3483 0 0016.256.955l-.9597.6905a8.4867 8.4867 0 00-.2855-.086l-.414-1.1066a.3483.3483 0 00-.5781-.1154l-.8069.8666a9.2936 9.2936 0 00-.2936-.0284L12.2946.1683a.3462.3462 0 00-.5892 0l-.6236 1.0073a13.7383 13.7383 0 00-.2936.0284L9.9803.3374a.3462.3462 0 00-.578.1154l-.4141 1.1065c-.0962.0274-.1903.0567-.2855.086L7.744.955a.3483.3483 0 00-.5447.2258L7.009 2.348a9.3574 9.3574 0 00-.2622.1407l-1.0762-.491a.3462.3462 0 00-.49.328l.0416 1.1845a7.9826 7.9826 0 00-.2278.1873L3.8413 3.425a.3472.3472 0 00-.4171.4171l.2713 1.1531c-.0628.075-.1255.1509-.1863.2268l-1.1845-.0415a.3462.3462 0 00-.328.49l.491 1.0761a9.167 9.167 0 00-.1407.2622l-1.1662.1894a.3483.3483 0 00-.2258.5446l.6904.9587a13.303 13.303 0 00-.087.2855l-1.1065.414a.3483.3483 0 00-.1155.5781l.8656.807a9.2936 9.2936 0 00-.0283.2935l-1.0073.6236a.3442.3442 0 000 .5892l1.0073.6236c.008.0982.0182.1964.0283.2936l-.8656.8079a.3462.3462 0 00.1155.578l1.1065.4141c.0273.0962.0567.1914.087.2855l-.6904.9587a.3452.3452 0 00.2268.5447l1.1662.1893c.0456.088.0922.1751.1408.2622l-.491 1.0762a.3462.3462 0 00.328.49l1.1834-.0415c.0618.0769.1235.1528.1873.2277l-.2713 1.1541a.3462.3462 0 00.4171.4161l1.153-.2713c.075.0638.151.1255.2279.1863l-.0415 1.1845a.3442.3442 0 00.49.327l1.0761-.49c.087.0486.1741.0951.2622.1407l.1903 1.1662a.3483.3483 0 00.5447.2268l.9587-.6904a9.299 9.299 0 00.2855.087l.414 1.1066a.3452.3452 0 00.5781.1154l.8079-.8656c.0972.0111.1954.0203.2936.0294l.6236 1.0073a.3472.3472 0 00.5892 0l.6236-1.0073c.0982-.0091.1964-.0183.2936-.0294l.8069.8656a.3483.3483 0 00.578-.1154l.4141-1.1066a8.4626 8.4626 0 00.2855-.087l.9587.6904a.3452.3452 0 00.5447-.2268l.1903-1.1662c.088-.0456.1751-.0931.2622-.1407l1.0762.49a.3472.3472 0 00.49-.327l-.0415-1.1845a6.7267 6.7267 0 00.2267-.1863l1.1531.2713a.3472.3472 0 00.4171-.416l-.2713-1.1542c.0628-.0749.1255-.1508.1863-.2278l1.1845.0415a.3442.3442 0 00.328-.49l-.49-1.076c.0475-.0872.0951-.1742.1407-.2623l1.1662-.1893a.3483.3483 0 00.2258-.5447l-.6904-.9587.087-.2855 1.1066-.414a.3462.3462 0 00.1154-.5781l-.8656-.8079c.0101-.0972.0202-.1954.0283-.2936l1.0073-.6236a.3442.3442 0 000-.5892zm-6.7413 8.3551a.7138.7138 0 01.2986-1.396.714.714 0 11-.2997 1.396zm-.3422-2.3142a.649.649 0 00-.7715.5l-.3573 1.6685c-1.1035.501-2.3285.7795-3.6193.7795a8.7368 8.7368 0 01-3.6951-.814l-.3574-1.6684a.648.648 0 00-.7714-.499l-1.473.3158a8.7216 8.7216 0 01-.7613-.898h7.1676c.081 0 .1356-.0141.1356-.088v-2.536c0-.074-.0536-.0881-.1356-.0881h-2.0966v-1.6077h2.2677c.2065 0 1.1065.0587 1.394 1.2088.0901.3533.2875 1.5044.4232 1.8729.1346.413.6833 1.2381 1.2685 1.2381h3.5716a.7492.7492 0 00.1296-.0131 8.7874 8.7874 0 01-.8119.9526zM6.8369 20.024a.714.714 0 11-.2997-1.396.714.714 0 01.2997 1.396zM4.1177 8.9972a.7137.7137 0 11-1.304.5791.7137.7137 0 011.304-.579zm-.8352 1.9813l1.5347-.6824a.65.65 0 00.33-.8585l-.3158-.7147h1.2432v5.6025H3.5669a8.7753 8.7753 0 01-.2834-3.348zm6.7343-.5437V8.7836h2.9601c.153 0 1.0792.1772 1.0792.8697 0 .575-.7107.7815-1.2948.7815zm10.7574 1.4862c0 .2187-.008.4363-.0243.651h-.9c-.09 0-.1265.0586-.1265.1477v.413c0 .973-.5487 1.1846-1.0296 1.2382-.4576.0517-.9648-.1913-1.0275-.4717-.2704-1.5186-.7198-1.8436-1.4305-2.4034.8817-.5599 1.799-1.386 1.799-2.4915 0-1.1936-.819-1.9458-1.3769-2.3153-.7825-.5163-1.6491-.6195-1.883-.6195H5.4682a8.7651 8.7651 0 014.907-2.7699l1.0974 1.151a.648.648 0 00.9182.0213l1.227-1.1743a8.7753 8.7753 0 016.0044 4.2762l-.8403 1.8982a.652.652 0 00.33.8585l1.6178.7188c.0283.2875.0425.577.0425.8717zm-9.3006-9.5993a.7128.7128 0 11.984 1.0316.7137.7137 0 01-.984-1.0316zm8.3389 6.71a.7107.7107 0 01.9395-.3625.7137.7137 0 11-.9405.3635z"/></symbol><symbol id="s-svg" viewBox="0 0 24 24"><path d="M12 0c-1.497 0-2.749.965-3.248 2.17a3.45 3.45 0 00-.238 1.416 3.459 3.459 0 00-1.168-.834 3.508 3.508 0 00-1.463-.256 3.513 3.513 0 00-2.367 1.02c-1.06 1.058-1.263 2.625-.764 3.83.179.432.47.82.82 1.154a3.49 3.49 0 00-1.402.252C.965 9.251 0 10.502 0 12c0 1.497.965 2.749 2.17 3.248.437.181.924.25 1.414.236-.357.338-.65.732-.832 1.17-.499 1.205-.295 2.772.764 3.83 1.058 1.06 2.625 1.263 3.83.764.437-.181.83-.476 1.168-.832-.014.49.057.977.238 1.414C9.251 23.035 10.502 24 12 24c1.497 0 2.749-.965 3.248-2.17a3.45 3.45 0 00.238-1.416c.338.356.73.653 1.168.834 1.205.499 2.772.295 3.83-.764 1.06-1.058 1.263-2.625.764-3.83a3.459 3.459 0 00-.834-1.168 3.45 3.45 0 001.416-.238C23.035 14.749 24 13.498 24 12c0-1.497-.965-2.749-2.17-3.248a3.455 3.455 0 00-1.414-.236c.357-.338.65-.732.832-1.17.499-1.205.295-2.772-.764-3.83a3.513 3.513 0 00-2.367-1.02 3.508 3.508 0 00-1.463.256c-.437.181-.83.475-1.168.832a3.45 3.45 0 00-.238-1.414C14.749.965 13.498 0 12 0zm-.041 1.613a1.902 1.902 0 011.387 3.246v3.893L16.098 6A1.902 1.902 0 1118 7.902l-2.752 2.752h3.893a1.902 1.902 0 110 2.692h-3.893L18 16.098A1.902 1.902 0 1116.098 18l-2.752-2.752v3.893a1.902 1.902 0 11-2.692 0v-3.893L7.902 18A1.902 1.902 0 116 16.098l2.752-2.752H4.859a1.902 1.902 0 110-2.692h3.893L6 7.902A1.902 1.902 0 117.902 6l2.752 2.752V4.859a1.902 1.902 0 011.305-3.246z"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+<div class="container nav__inner">
+<a class="wordmark" href="../" aria-label="Wynston Wong, home">Wynston Wong</a>
+<nav class="nav__links" id="primary-nav" data-nav-links aria-label="Primary">
+<a href="../projects/">Projects</a>
+<a href="../experience/">Experience</a>
+<a href="../contact/" aria-current="page">Contact</a>
+</nav>
+<button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+<button class="icon-btn nav__toggle" type="button" data-nav-toggle aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div>
-                </div>
-                <div class="grid grid--2">
-                    <a class="contact-card reveal" href="https://www.linkedin.com/in/wynston-wong-290189304/" rel="noopener" target="_blank">
-                        <span aria-hidden="true" class="contact-card__icon">
-                            <svg fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9.5 9h3.8v1.7h.05c.57-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.94-3.06-1.94 0-2.24 1.45-2.24 2.96V21h-4z"></path>
-                            </svg>
-                        </span>
-                        <span>
-                            <b>LinkedIn</b>
-                            <span>linkedin.com/in/wynston-wong-290189304</span>
-                        </span>
-                    </a>
-                    <a class="contact-card reveal" href="https://github.com/wyn-cmd" rel="noopener" target="_blank">
-                        <span aria-hidden="true" class="contact-card__icon">
-                            <svg fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.57 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.57 1.06 1.57 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.41-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.28 9.28 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.81c0 .27.18.59.69.49A10.06 10.06 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"></path>
-                            </svg>
-                        </span>
-                        <span>
-                            <b>GitHub</b>
-                            <span>github.com/wyn-cmd</span>
-                        </span>
-                    </a>
-                    <div class="contact-card reveal" style="cursor:default">
-                        <span aria-hidden="true" class="contact-card__icon">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
-                                <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"></path>
-                                <circle cx="12" cy="10" r="2.6"></circle>
-                            </svg>
-                        </span>
-                        <span>
-                            <b>Location</b>
-                            <span>Singapore. Open to remote internships &amp; local teams.</span>
-                        </span>
-                    </div>
-                    <div class="contact-card reveal" style="cursor:default">
-                        <span aria-hidden="true" class="contact-card__icon">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="9"></circle>
-                                <path d="M12 7v5l3.2 2"></path>
-                            </svg>
-                        </span>
-                        <span>
-                            <b>Availability</b>
-                            <span>Interning at SQL VIEW since September 2026 &amp; studying until May 2027. Happy to talk about what comes after.</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <div class="wrap">
-                <div class="section__head reveal">
-                    <h2>How I can help a team</h2>
-                    <div class="kicker">What I am after</div>
-                </div>
-                <div class="grid grid--3">
-                    <article class="card reveal">
-                        <div aria-hidden="true" class="card__icon">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
-                                <path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M4.2 16.5l2.6-1.5M17.2 9l2.6-1.5"></path>
-                                <circle cx="12" cy="12" r="4"></circle>
-                            </svg>
-                        </div>
-                        <h3>AI agents &amp; LLM tooling</h3>
-                        <p>
-                            What I do now at SQL VIEW: self-hosted agents that answer questions over
-                            internal documents, chat interfaces wired into company workflows, &amp; the
-                            prompt &amp; model tuning that keeps the answers trustworthy.
-                        </p>
-                    </article>
-                    <article class="card reveal">
-                        <div aria-hidden="true" class="card__icon">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
-                                <path d="M4 6h16M4 12h16M4 18h10"></path>
-                            </svg>
-                        </div>
-                        <h3>Log &amp; alert triage</h3>
-                        <p>
-                            I have spent a lot of time reading authentication logs &amp; packet captures
-                            &amp; building tools to summarise them, which is most of the work of working
-                            through a queue of alerts without burning out on it.
-                        </p>
-                    </article>
-                    <article class="card reveal">
-                        <div aria-hidden="true" class="card__icon">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
-                                <rect height="14" rx="2" width="18" x="3" y="4"></rect>
-                                <path d="M8 20h8M9 9l2 2-2 2M14 13h2"></path>
-                            </svg>
-                        </div>
-                        <h3>Automation &amp; tooling</h3>
-                        <p>
-                            If a task is repetitive, I will usually write the script for it. That
-                            instinct is where most of my public repositories came from, including the
-                            honeypots, the converters &amp; the monitors.
-                        </p>
-                    </article>
-                    <article class="card reveal">
-                        <div aria-hidden="true" class="card__icon">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
-                                <path d="M12 3l7 3v6c0 4.2-2.9 7.7-7 9-4.1-1.3-7-4.8-7-9V6z"></path>
-                                <path d="M9.5 12.5l1.8 1.8 3.4-3.6"></path>
-                            </svg>
-                        </div>
-                        <h3>Testing &amp; reporting</h3>
-                        <p>
-                            Penetration testing work that ends in a written report somebody can act on:
-                            what was found, how bad it actually is, &amp; what to change first on Monday.
-                        </p>
-                    </article>
-                    <article class="card reveal">
-                        <div aria-hidden="true" class="card__icon">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
-                                <path d="M4 4h16v11H7l-3 3z"></path>
-                            </svg>
-                        </div>
-                        <h3>Communication</h3>
-                        <p>
-                            Sitting as a delegate in the MUN Crisis Committee at MUNch CTF meant arguing
-                            a position under time pressure in moderated caucus &amp; negotiating it out
-                            with a room in unmoderated caucus. That is the same skill a team needs when
-                            a finding has to be explained to someone who was not in the room for it.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <div class="wrap">
-                <div class="callout reveal">
-                    <div>
-                        <h3>Still reading? You may as well look at the code</h3>
-                        <p>
-                            Sixty-one projects are written up over on the projects page, &amp; the rest
-                            of the repositories are public on GitHub.
-                        </p>
-                    </div>
-                    <div class="callout__actions">
-                        <a class="btn btn--primary" href="../projects/">Browse projects</a>
-                        <a class="btn btn--ghost" href="https://github.com/wyn-cmd?tab=repositories" rel="noopener" target="_blank">All repositories</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="wrap footer__inner">
-            <div>© <span data-year="">2026</span> Wynston Wong Jun De. Built by hand, no template.</div>
-            <div class="footer__links">
-                <a href="https://github.com/wyn-cmd" rel="noopener" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/wynston-wong-290189304/" rel="noopener" target="_blank">LinkedIn</a>
-                <a href="../projects/">Projects</a>
-                <a href="../contact/">Contact</a>
-            </div>
-        </div>
-    </footer>
-    <script src="../script.js"></script>
+</header>
+<main id="main">
+<section class="section">
+<div class="container">
+<div class="head">
+<h1>Say hello</h1>
+<p class="lead">Happy to talk AI agents, CTFs, honeypots or odd network traffic.</p>
+</div>
+<div class="actions" style="margin-bottom: var(--space-2xl)">
+<a class="btn" href="https://www.linkedin.com/in/wynston-wong-290189304/" rel="noopener" target="_blank">Message on LinkedIn</a>
+<a class="btn btn--quiet" href="https://github.com/wyn-cmd" rel="noopener" target="_blank">GitHub</a>
+</div>
+<dl class="facts">
+<div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/wynston-wong-290189304/" rel="noopener" target="_blank">linkedin.com/in/wynston-wong-290189304</a></dd></div>
+<div><dt>GitHub</dt><dd><a href="https://github.com/wyn-cmd" rel="noopener" target="_blank">github.com/wyn-cmd</a></dd></div>
+<div><dt>Location</dt><dd>Singapore. Open to remote internships &amp; local teams.</dd></div>
+<div><dt>Availability</dt><dd>Interning at SQL VIEW since September 2026 &amp; studying until May 2027. Happy to talk about what comes after.</dd></div>
+</dl>
+</div>
+</section>
+
+<section class="section section--ruled">
+<div class="container">
+<div class="head"><h2>How I can help a team</h2></div>
+<ol class="rows">
+<li><h3>AI agents &amp; LLM tooling</h3><div class="row__body"><p>AI agents that answer questions &amp; automate routine tasks, conversational interfaces wired into business workflows, &amp; the prompt &amp; model tuning that keeps answers trustworthy.</p></div></li>
+<li><h3>Log &amp; alert triage</h3><div class="row__body"><p>Hours spent reading authentication logs &amp; packet captures, &amp; building tools to summarise them.</p></div></li>
+<li><h3>Automation &amp; tooling</h3><div class="row__body"><p>If a task repeats, I write the script. Most of my public repositories started that way.</p></div></li>
+<li><h3>Testing &amp; reporting</h3><div class="row__body"><p>Penetration tests that end in a report somebody can act on: what was found, how bad it is, &amp; what to change first on Monday.</p></div></li>
+<li><h3>Communication</h3><div class="row__body"><p>Arguing a position in MUN crisis committee is the same skill as explaining a finding to someone who was not in the room.</p></div></li>
+</ol>
+</div>
+</section>
+
+<section class="section section--tall band band--paper">
+<div class="container">
+<div class="head">
+<h2>Still reading? Read the code</h2>
+<p class="lead">Sixty-one projects are written up here, and the rest of my repositories are public.</p>
+</div>
+<div class="actions">
+<a class="btn" href="../projects/">Browse projects</a>
+<a class="btn btn--quiet" href="https://github.com/wyn-cmd?tab=repositories" rel="noopener" target="_blank">All repositories</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer__grid">
+<p class="footer__note"><span class="fn-line fn-exit">exit 0 #</span><strong class="fn-line fn-copy">© <span data-year>2026</span> Wynston Wong Jun De, Singapore.</strong><span class="fn-line fn-meta">Set in IBM Plex Sans &amp; JetBrains Mono.</span><span class="fn-line fn-meta">Built by hand, no framework.</span></p>
+<nav class="footer__links" aria-label="Footer">
+<a href="https://github.com/wyn-cmd" rel="noopener" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/wynston-wong-290189304/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="../projects/">Projects</a>
+<a href="../experience/">Experience</a>
+<a href="../contact/">Contact</a>
+</nav>
+</div>
+</footer>
+<script src="../script.js"></script>
 </body>
 </html>
