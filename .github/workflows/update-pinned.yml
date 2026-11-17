@@ -1,0 +1,39 @@
+name: Update pinned repos
+
+# Refreshes data/pinned.json from the repositories pinned on the GitHub profile, and the
+# recoloured contribution snake, so the site follows GitHub without a manual edit.
+on:
+  schedule:
+    - cron: "17 21 * * *" # daily, 05:17 Singapore time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-pinned
+  cancel-in-progress: false
+
+jobs:
+  pinned:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Read the pinned repositories
+        run: node scripts/update-pinned.mjs data/pinned.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Refresh the contribution snake
+        run: node scripts/update-snake.mjs assets
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain -- data/pinned.json assets/snake-dark.svg assets/snake-light.svg)" ]; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/pinned.json assets/snake-dark.svg assets/snake-light.svg
+          git commit -m "Update pinned repos and contribution snake"
+          git push
